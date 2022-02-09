@@ -3,16 +3,16 @@
 
 void delete_item_list(struct client* head, struct client* del)
 {
-    struct client* tmp = head;
-    struct client* buf;
-    if(tmp->next != NULL)
+	struct client* tmp = head;
+	struct client* buf;
+	if(tmp->next != NULL)
     {
         while(tmp->next != del)
             tmp = tmp->next;
         buf = tmp->next;
         tmp->next = tmp->next->next;
         free(buf);
-	buf = NULL
+		buf = NULL;
     }
     else
     {
